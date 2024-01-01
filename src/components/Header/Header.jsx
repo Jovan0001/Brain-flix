@@ -1,21 +1,23 @@
-import logo from "../../BrainFlix-logo.svg";
-import "../Header/Header.scss";
-import avatar from "../1.jpg"
-function  Header() {
+import "./Header.scss";
+const Header = (props) => {
   return (
-    <header className="header__main">
-      <div className="nav__main">
-        <img src= {logo} alt="logo" />
-        </div>
-        <div className="nav__input"><input className="nav__input" type="text" placeholder="search"></input>
-        <img src={avatar} className="profileImg" /> 
-        </div>
-       <button> 
-        <img src="http://www.w3.org/2000/svg"
-         alt="" />
-        UPLOAD
-        </button>
+
+    <header className="header">
+      <div className="header__mainimage"></div>
+      <nav className="header__nav">
+        <form className="header__form">
+          <input className="header__input" type="text" placeholder="Search"></input>
+          <button className="header__button" type="submit">
+            <img className="logo" src="" alt="" />
+            UPLOAD
+          </button>
+        </form>
+      </nav>
+      <div className="header__avatar">
+        <img className="header__image" src={props.avatar} alt="Mohan" />
+      </div>
     </header>
+
   );
 }
 export default Header;
