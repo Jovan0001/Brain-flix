@@ -12,6 +12,9 @@
 }
 .video-main__link{
   width: 100%;
-  aspect-ratio: 16-9;
+  aspect-ratio: 16/9;
   vertical-align: middle;
+  object-position: center;
+  object-fit: cover;
+  margin: auto;
 }

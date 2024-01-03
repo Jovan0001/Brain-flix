@@ -8,14 +8,20 @@ import VideoSideBar from "./components/Videosection/Videosection";
 import Comments from "./components/Commentssection/Commentssection";
 import "./App.scss";
 
+
 function App() {
+  
   const avatar = Mohan;
-  const[SideBar] = useState(Videos)
-  const [video, setVideo] = useState(SideBar[0]);
+  const[sideBar , setSideBar] = useState(Videos.slice(1))
+  const [video, setVideo] = useState(Videos[0]);
+  
 
   const clickHandler = (id) => {
-    const selectedVideo = SideBar.find((vids) => vids.id ===id);
+    const selectedVideo = sideBar.find((vids) => vids.id ===id);
     setVideo(selectedVideo);
+
+    const updateSideBar = Videos.filter((vid) => vid.id !== selectedVideo.id)
+    setSideBar(updateSideBar)
   };
 
 
@@ -40,7 +46,7 @@ function App() {
             avatar={avatar}
             />
           </div>
-          <VideoSideBar SideBar={SideBar} clickHandler={clickHandler} />
+          <VideoSideBar SideBar={sideBar} clickHandler={clickHandler} />
         </section>
       </main>
     </div>
