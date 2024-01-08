@@ -63,7 +63,10 @@
   }
 }
 &__button{
-  display: block;
+  display: inline-flex;
+  justify-content: center;
+  text-decoration: none;
+  align-items: center;
   text-transform: uppercase;
   width: auto;
   height: 40px;

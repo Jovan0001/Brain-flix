@@ -1,5 +1,7 @@
 import "./Commentssection.scss";
 import Textarea from "../Textsection/Textsection";
+import Mohan from "../../assets/Images/Mohan-muruge.jpg";
+const avatar = Mohan;
 
 
 const Comment = ({ comment, formatTimeStamp }) => (
@@ -10,7 +12,7 @@ const Comment = ({ comment, formatTimeStamp }) => (
         {comment.name}
       </h4>
       <p className="comment-main__item comment-main__item--tym">
-        {formatTimeStamp(comment.timeStamp)}
+        {formatTimeStamp(comment.timestamp)}
       </p>
       <p className="comment-main__item comment-main__item--cmt">
         {comment.comment}
@@ -19,14 +21,15 @@ const Comment = ({ comment, formatTimeStamp }) => (
   </li>
 );
 
+ 
 const Comments = ({ video, avatar, formatTimeStamp }) => (
   <div className="comment-main">
     <h3 className="comment-main__title">
-      {video.comments.length} Comments
+      {video.comments && video.comments.length} Comments
     </h3>
     <Textarea title="JOIN THE CONVERSATION" btn="COMMENT" avatar={avatar} />
     <ul className="comment-main__comments">
-      {video.comments.map((comment) => (
+      {video.comments && video.comments?.map((comment) => (
         <Comment key={comment.id} comment={comment} formatTimeStamp={formatTimeStamp} />
       ))}
     </ul>

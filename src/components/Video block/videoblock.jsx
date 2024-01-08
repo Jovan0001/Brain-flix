@@ -2,10 +2,11 @@ import "./videoblock.scss";
 
 
 const VideoBlock = ({ video }) =>{
-  const { image } = video;
+  console.log(video);
+  const poster = video.image;
   return(
     <div className="video-main">
-      <video className="video-main__link" controls poster={image}></video>
+      <video className="video-main__link" controls poster={poster}></video>
     </div>
   );
 };

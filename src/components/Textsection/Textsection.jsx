@@ -1,7 +1,9 @@
 import "./Textsection.scss";
+import Mohan from "../../assets/Images/Mohan-muruge.jpg";
+const avatar = Mohan;
 
 
-const Textarea = ({ avatar, title, btn }) => {
+const Textarea = ({ title, btn }) => {
   return (
     <section className="textarea">
       <div className="textarea__avatar">

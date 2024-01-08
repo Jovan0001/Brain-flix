@@ -1,4 +1,11 @@
+import { Link } from "react-router-dom";
 import "./Header.scss";
+import Mohan from "../../assets/Images/Mohan-muruge.jpg";
+const avatar = Mohan;
+
+
+// todo use a link component to goto the upload route
+
 const Header = (props) => {
   return (
 
@@ -7,14 +14,13 @@ const Header = (props) => {
       <nav className="header__nav">
         <form className="header__form">
           <input className="header__input" type="text" placeholder="Search"></input>
-          <button className="header__button" type="submit">
-            <img className="logo" src="" alt="" />
+          <Link to= "/upload" className="header__button" type="submit">
             UPLOAD
-          </button>
+          </Link>
         </form>
       </nav>
       <div className="header__avatar">
-        <img className="header__image" src={props.avatar} alt="Mohan" />
+        <img className="header__image" src={avatar} alt="Mohan" />
       </div>
     </header>
 

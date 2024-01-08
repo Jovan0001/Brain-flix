@@ -1,12 +1,12 @@
-import "./video.scss";
-
+import "./VideoDetails.scss";
 
 
 const VideoDetails = ({ video, formatTimeStamp }) => {
+  
   return (
     <section className="video-detail">
       <h1 className="video-detail__heading">{video.title}</h1>
-      
+  
       <div className="video-detail__sec">
         <div className="video-detail__list">
           <h4 className="video-detail__item video-detail__item--bold">By {video.channel}</h4>
