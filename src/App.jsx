@@ -3,7 +3,7 @@ import HomePage from "./pages/HomePage/HomePage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
 import { Link } from "react-router-dom";
-import videoPic from "./assets/Images/Upload-video-preview.jpg";
+
 
 function App() {
   return (

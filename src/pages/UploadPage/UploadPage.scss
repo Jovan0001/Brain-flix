@@ -2,32 +2,82 @@
 @use "../../styles/partials/variables" as *;
 
 
-.upload__image {
-  background-image: url(../../assets/Images/Upload-video-preview.jpg);
+.upload{
+  width: auto;
+  &__heading{
+    color: $primary-color-black;
+  }
+  img{
+    height: 280px;
+    border-radius: 4px;
+    width: 40%;
+    @include desktop{
+      width: 60%;
+    }
+  }
+}
+.upload__title{
+  color: $primary-color-silver;
+}
+.upload__description{
+  color: $primary-color-silver;
+}
+.upload__form{
+  width: 40%;
+  @include desktop{
+    width: 100%;
+
+  }
+}
+.upload__textone{
   width: 100%;
-  height: 100px;
-
 }
-
-.upload__title {
+.upload__texttwo{
+  width: 100%;
+}
+.upload__headingtwo{
   color: $primary-color-silver;
 }
 
-.upload__headingtwo {
-  color: $primary-color-silver;
-}
 
-.upload__description {
-  color: $primary-color-silver;
-}
+
+// .upload__form{
+//   display: flex;
+//   flex-direction: column;
+//  &__textone{
+//   width: 100%;
+//  }
+// }
+// .upload__title {
+//   color: $primary-color-silver;
+// }
+
+
+// .upload__headingtwo {
+//   color: $primary-color-silver;
+// }
+
+// .upload__description {
+//   color: $primary-color-silver;
+// }
 
 .upload__button {
   display: flex;
-  flex-direction: column;
+ width: 40%;
+ flex-direction: column;
+  padding-top: 30px;
+  
+@include desktop{
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+
+}
 }
 
 .upload__buttonone {
   display: inline-flex;
+
   justify-content: center;
   text-decoration: none;
   align-items: center;
@@ -47,7 +97,8 @@
   border-radius: 4px;
 
   @include tablet {
-    width: 150px;
+    
+    width: 100%;
     padding: 0 32px;
     margin: 0 1.72em;
     @include dt-label-buttons;
@@ -56,7 +107,7 @@
   @include desktop {
     margin-right: 3em;
   }
-}
+ }
 
 .upload__buttontwo {
   background-color: $primary-color-white;
@@ -66,7 +117,7 @@
   border-radius: 4px;
 
   @include tablet {
-    width: 150px;
+    width: 100%;
     padding: 0 32px;
     margin: 0 1.72em;
     @include dt-label-buttons;

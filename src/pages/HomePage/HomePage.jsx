@@ -27,15 +27,12 @@ function HomePage() {
   useEffect (()=> {
     const videoData = async () => {
       const response = await axios.get(`https://project-2-api.herokuapp.com/videos/${params.id}?api_key=jimmy`)
-      
       setVideo(response.data)
-  
-
     }
     videoData()
   },[params.id])
 
-  // not using click handler this sprint, please see review from yesterday for params id, useEffect
+ 
  
   const formatTimeStamp = (timestamp) => {
     const date = new Date(timestamp);
