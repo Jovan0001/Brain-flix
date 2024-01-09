@@ -17,9 +17,6 @@ function HomePage() {
     const fetchData = async () => {
       const response = await axios.get(`https://project-2-api.herokuapp.com/videos?api_key=jimmy`)
       setSideBar(response.data);
-      // const response2 = await axios.get(`https://project-2-api.herokuapp.com/videos/84e96018-4022-434e-80bf-000ce4cd12b8?api_key=jimmy`)
-
-      // setVideo(response2.data)
     }
     fetchData();
   }, [])

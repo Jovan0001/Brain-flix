@@ -8,76 +8,70 @@
     color: $primary-color-black;
   }
   img{
-    height: 280px;
+    width: 100%;
     border-radius: 4px;
-    width: 40%;
     @include desktop{
-      width: 60%;
     }
   }
 }
 .upload__title{
   color: $primary-color-silver;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 .upload__description{
   color: $primary-color-silver;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 .upload__form{
-  width: 40%;
+  width: 100%;
   @include desktop{
     width: 100%;
-
   }
+}
+.upload__heading{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 .upload__textone{
   width: 100%;
+  color:$primary-color-black;
 }
 .upload__texttwo{
   width: 100%;
+  
 }
 .upload__headingtwo{
   color: $primary-color-silver;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
-
-
-
-// .upload__form{
-//   display: flex;
-//   flex-direction: column;
-//  &__textone{
-//   width: 100%;
-//  }
-// }
-// .upload__title {
-//   color: $primary-color-silver;
-// }
-
-
-// .upload__headingtwo {
-//   color: $primary-color-silver;
-// }
-
-// .upload__description {
-//   color: $primary-color-silver;
-// }
+.hr{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
 
 .upload__button {
   display: flex;
- width: 40%;
+ width: 100%;
  flex-direction: column;
-  padding-top: 30px;
+  padding-top: 25px;
   
-@include desktop{
-  display: flex;
+@include tablet{
   flex-direction: row-reverse;
-  width: 100%;
+  width: 100px;
+  margin-left: auto;
+}
+@include desktop{
+  flex-direction: row-reverse;
+  width: 100px;
+  margin-left: auto;
+}
+}
 
-}
-}
 
 .upload__buttonone {
-  display: inline-flex;
-
   justify-content: center;
   text-decoration: none;
   align-items: center;
