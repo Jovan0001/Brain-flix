@@ -3,14 +3,20 @@
 
 
 .upload{
+  padding-right: 1rem;
+  padding-left: 1rem;
   width: auto;
   &__heading{
     color: $primary-color-black;
   }
   img{
-    width: 100%;
+    width: 50%;
     border-radius: 4px;
+    @include tablet{
+      width: 60%;
+    }
     @include desktop{
+      width: 100%;
     }
   }
 }
