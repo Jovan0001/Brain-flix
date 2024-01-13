@@ -4,11 +4,8 @@ import Mohan from "../../assets/Images/Mohan-muruge.jpg";
 const avatar = Mohan;
 
 
-// todo use a link component to goto the upload route
-
 const Header = (props) => {
   return (
-
     <header className="header">
       <Link to = "/"><div className="header__mainimage"></div></Link>
       <nav className="header__nav">
