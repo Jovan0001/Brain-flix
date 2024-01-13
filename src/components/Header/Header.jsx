@@ -10,7 +10,7 @@ const Header = (props) => {
   return (
 
     <header className="header">
-      <div className="header__mainimage"></div>
+      <Link to = "/"><div className="header__mainimage"></div></Link>
       <nav className="header__nav">
         <form className="header__form">
           <input className="header__input" type="text" placeholder="Search"></input>

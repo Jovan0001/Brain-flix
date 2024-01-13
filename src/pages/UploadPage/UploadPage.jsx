@@ -1,17 +1,20 @@
 import "./UploadPage.scss";
 import videoPic from "../../assets/Images/Upload-video-preview.jpg";
+import {Link} from "react-router-dom";
+
 
 function Upload() {
   return (
     
     <div className="upload">
-      <hr></hr>
+     
       <h1 className="upload__heading">Upload Video</h1>
-      <hr />
+      <hr></hr>
       <div className="upload__videocontainer">
         <div className="upload __titlecontainer">
           <h5 className="upload__title">VIDEO THUMBNAIL</h5>
-          <img className="upload__image" src={videoPic} alt="" />
+          
+       <Link to="/"> <img className="upload__image" src={videoPic} alt="logo" /></Link>
         </div>
         <form className="upload__form">
           <h5 className="upload__headingtwo">TITLE YOUR VIDEO</h5>
@@ -30,10 +33,11 @@ function Upload() {
           </textarea>
         </form>
       </div>
-      <hr></hr>
       <div className="upload__button">
         <button className="upload__buttonone">PUBLISH</button>
+      <Link to="/">
         <button className="upload__buttontwo">CANCEL</button>
+      </Link>
       </div>
     </div>
   );
