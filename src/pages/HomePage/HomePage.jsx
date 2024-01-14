@@ -15,7 +15,7 @@ function HomePage() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios.get(`https://project-2-api.herokuapp.com/videos?api_key=jimmy`)
+      const response = await axios.get(`http://localhost:5050/`)
       setSideBar(response.data);
     }
     fetchData();
@@ -27,7 +27,7 @@ function HomePage() {
 
   useEffect(() => {
     const videoData = async () => {
-      const response = await axios.get(`https://project-2-api.herokuapp.com/videos/${currentVideoId}?api_key=jimmy`);
+      const response = await axios.get(`http://localhost:5050/${currentVideoId}`);
 
       setVideo(response.data)
     };
